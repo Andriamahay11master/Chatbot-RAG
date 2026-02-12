@@ -1,0 +1,8 @@
+#pip install torch torchvision transformers sentence-transformers faiss-cpu accelerate
+torch>=1.10.0
+torchvision>=0.11.1
+transformers>=4.12.0
+sentence-transformers>=2.3.1
+faiss-cpu>=1.7.2
+accelerate>=0.5.1
+faiss-gpu>=1.7.2
