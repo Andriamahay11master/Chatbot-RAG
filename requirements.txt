@@ -6,3 +6,4 @@ sentence-transformers>=2.3.1
 faiss-cpu>=1.7.2
 accelerate>=0.5.1
 faiss-gpu>=1.7.2
+pdfplumber>=0.6.8
