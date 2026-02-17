@@ -1,6 +1,8 @@
 import faiss
 import numpy as np
 from sentence_transformers import SentenceTransformer
+# Export the variable
+__all__ = ["embedding_model"]
 
 # Load embedding model
 embedding_model = SentenceTransformer("all-MiniLM-L6-v2")
