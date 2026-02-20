@@ -1,4 +1,8 @@
 # Load your regulation text
+from back.embeddings import create_vector_index
+from back.preprocessing import clause_aware_chunking, clean_text, extract_pdf_text
+
+
 pdf_path = "/data/RCentre.pdf"  # Your PDF file
 
 raw_text = extract_pdf_text(pdf_path)
