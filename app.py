@@ -22,3 +22,27 @@ print(results_mistral)
 
 results_phi = evaluate_model("microsoft/Phi-3.5-mini-instruct")
 print(results_phi)
+
+# start the Flask app
+from flask import Flask, request, jsonify
+from flask_cors import CORS
+
+app = Flask(__name__)
+CORS(app)
+
+@app.route('/query', methods=['POST'])
+def query():
+    data = request.json
+    user_query = data.get('query', '')
+    
+    # Here you would implement the logic to use the vector index and generative model to get a response
+    # For demonstration, we'll just return the user query
+    response = {
+        'response': f"Received query: {user_query}"
+    }
+    
+    return jsonify(response)
+
+if __name__ == '__main__':
+    app.run(debug=True)
+    
