@@ -7,3 +7,6 @@ faiss-cpu>=1.7.2
 accelerate>=0.5.1
 faiss-gpu>=1.7.2
 pdfplumber>=0.6.8
+flask>=2.0.0
+flask-cors>=3.0.10
+
