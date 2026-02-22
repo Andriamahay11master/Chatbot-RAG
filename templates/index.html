@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RAG Interface chatbot</title>
+  </head>
+  <body>
+    <div class="chat-container">
+      <div class="chat-header">
+        <h3>Simple Mini Chat</h3>
+      </div>
+      <div class="chat-body">
+        <div class="chat-messages">
+          <div class="chat-message" id="chat-messages-container"></div>
+        </div>
+        <div class="chat-input">
+          <input
+            type="text"
+            id="chat-message-input"
+            placeholder="Type your message here..."
+          />
+          <button id="send-btn">Send</button>
+        </div>
+      </div>
+    </div>
+    <script>
+      const chatMessageInput = document.getElementById("chat-message-input");
+      const sendBtn = document.getElementById("send-btn");
+      const chatMessagesContainer = document.getElementById(
+        "chat-messages-container",
+      );
+
+      sendBtn.addEventListener("click", function () {
+        const message = chatMessageInput.value.trim();
+        if (message) {
+          const messageHTML = `
+                <div class="chat-message">
+                    <p>${message}</p>
+                </div>
+            `;
+          chatMessagesContainer.insertAdjacentHTML("beforeend", messageHTML);
+          chatMessageInput.value = "";
+        }
+      });
+
+      chatMessageInput.addEventListener("keyup", function (event) {
+        if (event.keyCode === 13) {
+          sendBtn.click();
+        }
+      });
+    </script>
+  </body>
+</html>
