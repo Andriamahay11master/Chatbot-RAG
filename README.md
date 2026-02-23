@@ -61,25 +61,29 @@ pip install -r requirements.txt
 
 ## Project Structure
 
-```
 Chatbot-RAG/
-├── app.py                      # Flask application entry point
-├── requirements.txt            # Python dependencies
-├── README.md                   # This file
-├── replacements.txt            # Text replacement rules for PDF processing
+├── app.py # Flask application entry point
+├── requirements.txt # Python dependencies
+├── README.md # This file
+├── replacements.txt # Text replacement rules for PDF processing
 │
-├── back/                       # Backend modules
-│   ├── embeddings.py          # Embedding model initialization
-│   ├── retrieval.py           # Vector search and document retrieval
-│   ├── preprocessing.py       # PDF extraction and text cleaning
-│   └── generative.py          # LLM-based answer generation
+├── assets/ # Static assets (CSS, images, etc.)
 │
-├── data/                       # Data storage (PDFs, embeddings, indices)
-│   └── (regulatory documents)
+├── templates/ # Flask templates
 │
-└── experience/                 # Experiments and notebooks
-    └── experiment.ipynb       # Experiment and testing notebooks
-```
+├── back/ # Backend modules
+│ ├── embeddings.py # Embedding model initialization
+│ ├── retrieval.py # Vector search and document retrieval
+│ ├── preprocessing.py # PDF extraction and text cleaning
+│ └── generative.py # LLM-based answer generation
+│
+├── data/ # Data storage (PDFs, embeddings, indices)
+│ └── (regulatory documents)
+│
+└── experience/ # Experiments and notebooks
+└── experiment.ipynb # Experiment and testing notebooks
+
+````
 
 ## Usage
 
@@ -94,7 +98,7 @@ Chatbot-RAG/
 
 ```bash
 python app.py
-```
+````
 
 3. **Query the chatbot:**
    - Send HTTP requests to the Flask API
